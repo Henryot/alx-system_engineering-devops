@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | awk 'BEGIN{ORS=","} {if ($0 != "./" && $0 != "../") print $0} END{print "\b\n"}'
+ls -ap1 | awk '{ORS = NR%2 ? ", " : "\n"} !/\.$/ {print $0}'
