@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | awk 'BEGIN{ORS=", "; dirsep="/"} !/\.\.$/ && !/\.$/ {if (NR%2==0) dirsep=""; print $0 dirsep} END{print "\b\b\n"}'
+ls -ap1 | grep -v '^\.\.$' | tr '\n' ',' | sed 's/,$/\n/'
