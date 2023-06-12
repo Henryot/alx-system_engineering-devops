@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 1 | sort | uniq -c | sort -rn | head -n 11 | while read count host; do echo "$host"; done
+cut -f 1 | sort | uniq -c | sort -rn | head -n 11 | while read -r count host; do echo -e "$host\t-\t$(date +%s)\t-\t-\t-\t-"; done
