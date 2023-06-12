@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' "$(ls -lt | tail -n +2 | head -n 10)"
+readarray -t files < <(ls -lt); for ((i = 1; i < 12; i++)); do echo "${files[i]}"; done
