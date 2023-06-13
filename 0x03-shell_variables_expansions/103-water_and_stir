@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "sclite" | tr 's' "${WATER//[[:digit:]]/}" | tr 'c' "${STIR//[[:digit:]]/}"
